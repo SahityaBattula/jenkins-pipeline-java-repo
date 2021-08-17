@@ -1,6 +1,22 @@
 pipeline {
     agent any
     stages {
+    stage('Input') {
+    options {
+    timeout(time: 1, unit: "MINUTES")
+    }
+    steps {
+    input ('Do you want to proceed?')
+    }
+    }
+    
+    stage('If proceed is clicked') {
+    steps {
+    print('hello')
+    }
+    }
+    }
+    }
         stage('Build') {
             steps {
                 echo 'Building java source code..'
