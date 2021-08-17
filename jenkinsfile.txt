@@ -41,7 +41,7 @@ pipeline {
 			echo 'Deploying java package....'
 		}
             }
-        }
+        
     
     post {
         always {
